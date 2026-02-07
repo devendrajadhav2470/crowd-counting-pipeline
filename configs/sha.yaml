@@ -1,0 +1,16 @@
+# ShanghaiTech Part A — Dense crowd scenes
+# Part A contains 482 images with highly congested scenes
+
+dataset:
+  name: shanghaitech_a
+  root: ./data/ShanghaiTech/part_A
+  sigma: 4                     # Adaptive sigma for dense crowds
+
+training:
+  epochs: 200
+  lr: 1.0e-6
+
+wandb:
+  enabled: true
+  project: crowd-counting
+

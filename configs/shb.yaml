@@ -1,0 +1,16 @@
+# ShanghaiTech Part B — Sparse crowd scenes
+# Part B contains 716 images with relatively sparse crowds
+
+dataset:
+  name: shanghaitech_b
+  root: ./data/ShanghaiTech/part_B
+  sigma: 15                    # Larger sigma for sparser crowds
+
+training:
+  epochs: 200
+  lr: 1.0e-6
+
+wandb:
+  enabled: true
+  project: crowd-counting
+

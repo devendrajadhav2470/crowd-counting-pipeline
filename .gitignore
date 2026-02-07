@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & Weights (download separately)
+data/
+weights/*.pth
+weights/*.pth.tar
+weights/*.onnx
+!weights/.gitkeep
+
+# Experiment tracking
+wandb/
+mlruns/
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*.tar
+*.zip
+kaggle.json
+

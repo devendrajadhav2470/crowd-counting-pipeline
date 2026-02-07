@@ -1,0 +1,104 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crowd-counting-pipeline"
+version = "1.0.0"
+description = "Production-grade crowd counting pipeline using CSRNet with density map estimation"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Devendra"},
+]
+keywords = ["crowd-counting", "deep-learning", "computer-vision", "csrnet", "density-estimation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "numpy>=1.24.0",
+    "opencv-python>=4.8.0",
+    "scipy>=1.10.0",
+    "Pillow>=9.5.0",
+    "h5py>=3.8.0",
+    "matplotlib>=3.7.0",
+    "scikit-learn>=1.2.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+train = [
+    "wandb>=0.15.0",
+]
+serve = [
+    "gradio>=4.0.0",
+]
+dev = [
+    "pytest>=7.3.0",
+    "ruff>=0.4.0",
+    "black>=24.0.0",
+    "mypy>=1.8.0",
+    "pre-commit>=3.5.0",
+]
+all = [
+    "crowd-counting-pipeline[train,serve,dev]",
+]
+
+[project.urls]
+Homepage = "https://github.com/YOUR_USERNAME/crowd-counting-pipeline"
+Repository = "https://github.com/YOUR_USERNAME/crowd-counting-pipeline"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+src = ["src", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["crowd_counting"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+

@@ -1,0 +1,39 @@
+# Default configuration for crowd counting pipeline
+# Override with dataset-specific configs (sha.yaml, shb.yaml)
+
+dataset:
+  name: shanghaitech_b
+  root: ./data/ShanghaiTech/part_B
+  sigma: 15                    # Gaussian sigma for density map generation
+  test_split: 0.1             # Fraction of training data used for validation
+
+model:
+  name: csrnet
+  pretrained_backbone: true    # Use ImageNet-pretrained VGG16 frontend
+
+training:
+  epochs: 200
+  batch_size: 1
+  lr: 1.0e-6
+  momentum: 0.95
+  weight_decay: 5.0e-4
+  seed: 42
+  num_workers: 4
+  print_freq: 30              # Print training loss every N batches
+
+  # Learning rate schedule
+  lr_steps: [-1, 1, 100, 150]
+  lr_scales: [1, 1, 1, 1]
+
+evaluation:
+  batch_size: 1
+
+wandb:
+  enabled: false
+  project: crowd-counting
+  entity: null                 # Your wandb username or team
+
+output:
+  dir: ./outputs
+  checkpoint_dir: ./weights
+
