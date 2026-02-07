@@ -58,8 +58,8 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/YOUR_USERNAME/crowd-counting-pipeline"
-Repository = "https://github.com/YOUR_USERNAME/crowd-counting-pipeline"
+Homepage = "https://github.com/devendrajadhav2470/crowd-counting-pipeline"
+Repository = "https://github.com/devendrajadhav2470/crowd-counting-pipeline"
 
 [tool.setuptools.packages.find]
 where = ["src"]

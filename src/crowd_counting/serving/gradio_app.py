@@ -169,7 +169,7 @@ def create_app(checkpoint_path: str = "weights/best_model.pth") -> "gr.Blocks":
             location. The total count is the sum of all pixel values.
 
             [Paper: CSRNet (CVPR 2018)](https://arxiv.org/abs/1712.03400) |
-            [GitHub Repository](https://github.com/YOUR_USERNAME/crowd-counting-pipeline)
+            [GitHub Repository](https://github.com/devendrajadhav2470/crowd-counting-pipeline)
             """
         )
 

@@ -5,9 +5,9 @@
 A modular, well-tested deep learning pipeline for estimating crowd counts from images using density map regression. Built with PyTorch, featuring experiment tracking (W&B), an interactive Gradio demo, Docker support, ONNX export, and CI/CD.
 
 <!-- Uncomment once you have a demo deployed:
-[![Live Demo](https://img.shields.io/badge/demo-Hugging%20Face%20Spaces-yellow)](https://huggingface.co/spaces/YOUR_USERNAME/crowd-counting)
+[![Live Demo](https://img.shields.io/badge/demo-Hugging%20Face%20Spaces-yellow)](https://huggingface.co/spaces/devendrajadhav2470/crowd-counting)
 -->
-[![CI](https://github.com/YOUR_USERNAME/crowd-counting-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/crowd-counting-pipeline/actions)
+[![CI](https://github.com/devendrajadhav2470/crowd-counting-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/devendrajadhav2470/crowd-counting-pipeline/actions)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
@@ -56,7 +56,7 @@ Evaluated on the **ShanghaiTech** crowd counting benchmark:
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/crowd-counting-pipeline.git
+git clone https://github.com/devendrajadhav2470/crowd-counting-pipeline.git
 cd crowd-counting-pipeline
 
 # Create a virtual environment (recommended)
@@ -194,7 +194,7 @@ To deploy the Gradio demo as a free hosted app:
 2. Create a new Space (select "Gradio" as the SDK)
 3. Upload your trained weights (`weights/best_model.pth`) as a file in the Space
 4. Push this repo's code to the Space repository
-5. The app will auto-build and deploy at `https://huggingface.co/spaces/YOUR_USERNAME/crowd-counting`
+5. The app will auto-build and deploy at `https://huggingface.co/spaces/devendrajadhav2470/crowd-counting`
 
 ---
 
